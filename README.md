@@ -1,10 +1,84 @@
-![MiniBill](http://billcolumbia.com/minibill.png)
+#Knight-Thon Meeting 7-18
+ 	
+ 	
+##Post Types:
 
-# Version 1.0 (Not yet pushed)
+* Executive Board
+	* Featured Image
+	* Bio (large)
+	* Position
+	* Email
+* Events
+	* Date
+	* Featured Image
+	* Location
+	* Description
+	* URL
+* Miracle Children
+	* Featured Image (large)
+	* Bio
+* Network Hospitals
+	* Featured Image
+	* Bio
+	* Link to Site
+* Resources
+	* PDF
+	* Gen Info
+* Sponsers
+	* PDF
+	* Gen Info
+* FB Albums
 
-After first adapting _s to create MiniBill, we have moved to a hand baked code base. Much more minimal now. *Please not that this is not version 1.0. [Check the tag](https://github.com/billcolumbia/MiniBill/tags) before use.
+##Pages
+* Home
+	* Video Embed or Event Photo Area
+	* Countdown to Knight-Thon
+* About
+	* The Event
+	* Childrens miracle network Hostpitals
+	* Miracle Children
+* Events Page
+	(1-2 per month)
+* Get Involved
+	* Become a Dancer & Start a team = 1 page
+ 	* Morale
+ 	* Volunteer
+	* Moral 
+* Sponsers
+	* PDF Area
+* Resources
+	* PDF Area
+* Facebook Albums Page
+	
+##Other Notes/Changes
+Home Page Area to have either event banner or Video embed
 
-## [Doumentation](https://github.com/billcolumbia/MiniBill/wiki)
+Add Facebook, Twitter, Instagram in footer
 
-## Heads up! If you are not part of OSI:
-Update the footer so that you aren't pulling our logos and info. You don't want that. Make sure you have Codekit or something that can compile compass.
+Change Color Scheme (Neons?)
+
+Look for emails for new colors and new header photos
+
+Update links (Dontate, supports, Register, Login)
+
+Remove Aside (redundant)
+
+
+
+## Design Ideas
+Watercolor instead of paint strokes background
+
+Icons
+
+Neon Colors
+
+	#F8ED31 (YELLOW)
+	#EC008B	(PINK)
+	#00ADEF (BLUE)
+	#698D45 (GREEN)
+
+	
+Fonts
+	
+	Helvetica
+	
