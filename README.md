@@ -68,6 +68,12 @@ Remove Aside (redundant)
 ## Design Ideas
 Watercolor instead of paint strokes background
 
+Grayscale Images
+
+Gray tones with Neon accents
+
+Mess with transparency/opacity
+
 Icons
 
 Neon Colors
