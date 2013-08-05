@@ -93,8 +93,41 @@ function custom_post_types() {
 		'taxonomies' => array(),
 		'has_archive' => false,
 		));
+
+	register_post_type('exec-board', array(
+		'labels' => array(
+			'name' => 'Executive Board',
+			'singular_name' => 'Board Member'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'taxonomies' => array(),
+		'has_archive' => false
+		));
+
+	register_post_type('children', array(
+		'labels' => array(
+			'name' => 'Miracle Children',
+			'singular_name' => 'Child'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'taxonomies' => array(),
+		'has_archive' => false
+		));
+
+	register_post_type('hospitals', array(
+		'labels' => array(
+			'name' => 'Network Hospital',
+			'singular_name' => 'Hospital'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'taxonomies' => array(),
+		'has_archive' => false
+		));
 }
-//add_action('init', 'custom_post_types');
+add_action('init', 'custom_post_types');
 
 
 /* Change dashboard icons for the custom post types.
@@ -123,6 +156,10 @@ function cpt_icons() {
 
 /* To include other collections of functions, include_once() the relevant files here. */
 
-include_once("functions/functions-nav.php");
+include("functions/functions-nav.php");
+include("functions/functions-board.php");
+include("functions/functions-children.php");
+include("functions/functions-hospitals.php");
+
 
 ?>
