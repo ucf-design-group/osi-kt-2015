@@ -49,6 +49,8 @@
 * Resources
 	* PDF Area
 * Facebook Albums Page
+* Contact
+	* Executive Board
 	
 ##Other Notes/Changes
 Home Page Area to have either event banner or Video embed
