@@ -126,6 +126,17 @@ function custom_post_types() {
 		'taxonomies' => array(),
 		'has_archive' => false
 		));
+
+		register_post_type('fb-albums', array(
+		'labels' => array(
+			'name' => 'FB Albums',
+			'singular_name' => 'FB Album'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title'),
+		'taxonomies' => array(),
+		'has_archive' => false
+		));
 }
 add_action('init', 'custom_post_types');
 
