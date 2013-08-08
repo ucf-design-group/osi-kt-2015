@@ -12,7 +12,7 @@ function hospital_meta_add() {
  
 	add_meta_box (
 	'hospital_meta',
-	'hospital Information',
+	'Hospital Information',
 	'hospital_meta',
 	'hospitals',
 	'normal',
@@ -24,16 +24,11 @@ function hospital_meta() {
 	global $post;
 	wp_nonce_field(basename( __FILE__ ), 'hospital-form-nonce' );
 
-	$url = get_post_meta($post->ID, 'hospital-form-url', true) ? get_post_meta($post->ID, 'hospital-form-url', true) : '';
 	$order = get_post_meta($post->ID, 'hospital-form-order', true) ? get_post_meta($post->ID, 'hospital-form-order', true) : '';
 
 	?>
 	<style type="text/css">#hospital-form-order{width: 50px;}#hospital-form div{display:inline-block; padding:0 5px;}</style>
 	<div id="hospital-form">
-		<div>
-			<label for="hospital-form-url">Hospital URL:</label>
-			<input type="text" name="hospital-form-url" id="hospital-form-url" value="<?php echo $url; ?>" />
-		</div>
 		<div>
 			<label for="hospital-form-order">Order on Page:</label>
 			<input type="text" name="hospital-form-order" id="hospital-form-order" value="<?php echo $order; ?>" />
@@ -60,7 +55,6 @@ function hospital_meta_save() {
 
 	$input = array();
 
-	$input['url'] = (isset($_POST['hospital-form-url']) ? $_POST['hospital-form-url'] : '');
 	$input['order'] = (isset($_POST['hospital-form-order']) ? $_POST['hospital-form-order'] : '');
 
 	$input['order'] = str_pad($input['order'], 3, "0", STR_PAD_LEFT);

@@ -118,7 +118,7 @@ function custom_post_types() {
 
 	register_post_type('hospitals', array(
 		'labels' => array(
-			'name' => 'Network Hospital',
+			'name' => 'Network Hospitals',
 			'singular_name' => 'Hospital'),
 		'public' => true,
 		'hierarchical' => false,
