@@ -66,9 +66,7 @@ Modify Aside to include links to helpmakemiracles.org (donate, support, register
 ## Design Ideas
 Watercolor instead of paint strokes background
 
-Grayscale Images
-
-Gray tones with Neon accents
+Grayscale Images Gray tones with Neon accents
 
 Mess with transparency/opacity
 
