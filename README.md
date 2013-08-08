@@ -25,6 +25,7 @@
 	* PDF
 	* Gen Info
 * Sponsers
+	* Featured Image 
 	* PDF
 	* Gen Info
 * FB Albums
@@ -55,16 +56,11 @@
 ##Other Notes/Changes
 Home Page Area to have either event banner or Video embed
 
-Add Facebook, Twitter, Instagram in footer
-
 Change Color Scheme (Neons?)
 
 Look for emails for new colors and new header photos
 
-Update links (Dontate, supports, Register, Login)
-
-Remove Aside (redundant)
-
+Modify Aside to include links to helpmakemiracles.org (donate, support, register, login) and to include social/contact info
 
 
 ## Design Ideas
