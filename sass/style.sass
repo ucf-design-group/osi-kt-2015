@@ -9,12 +9,8 @@
  License: None, feel free to hack :)
  */
 
-// Change this to whatever you'd like. This is just the defualt so we 
-// have something nice to prototype with.
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")
-
 // Necessary imports, feel free to explore and hack though :)
-@import reset, menu, buttons, footer
+@import reset, menu, buttons, footer, hospitals
 
 // Base variables
 $baseTypeFace: 'Helvetica', sans-serif
@@ -24,10 +20,73 @@ $baseTypeFace: 'Helvetica', sans-serif
 html
 	font-size: 16px
 body
-	background-color: #4a494a
+	background: url(resources/banner.png) center no-repeat
+	background-color: #babcbc
 	font: 62.5%/1.5 $baseTypeFace
-	font-weight: 600 
+
+h1
+	font-size: 3em
+	color: #F8ED31
+	font-weight: 100
 	
+h2
+	color: #698D45
+	font-size: 2.4em
+	margin-bottom: 1em
+	
+h3
+	color: #EC008B
+	font-size: 1.8em
+	
+h4, a
+	color: #00ADEF
+	text-decoration: none 
+	
+h4, p
+	font-size: 1.5em
+	
+nav
+	padding: 5em 0
+	text-align: center
+	background-color: #6A6A6A
+	@extend %clearfix
+	
+	ul
+		display: block
+		margin: auto
+		text-align: center
+	
+	li
+		display: inline-block
+		font-size: 1.6em
+		font-weight: bold
+		padding: 0 1em
+
+section
+	margin: 1em auto
+	background: rgba(106, 106, 106, 0.50)
+	max-width: 1000px
+	
+footer
+	color: #eeeeee
+	text-align: center
+	
+	span
+		display: block
+		margin: auto
+		max-width: 1000px
+	
+.main article
+	margin: 4em auto
+	max-width: 1000px
+	padding: 1em
+
+
+.content-area
+	margin: auto
+	width: 100%
+
+
 // Clearfix (to use, @extend %clearfix)
 %clearfix
 	zoom: 1
