@@ -14,6 +14,7 @@ get_header(); ?>
 
 				<section class="contact">
 					<article class="contact">
+						<h3>Location:</h3>
 						<p>Knight-Thon's office is located on the second floor of the Student Union, inside The Office of Student Involvement, room 208.</p>
 						<h3>Phone:</h3>
 						<p><a href="tel:407-823-1154">407-823-1154</a></p>
