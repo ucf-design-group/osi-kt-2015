@@ -10,7 +10,7 @@
  */
 
 // Necessary imports, feel free to explore and hack though :)
-@import reset, menu, buttons, footer, hospitals
+@import reset, menu, buttons, footer, hospitals, contact
 
 // Base variables
 $baseTypeFace: 'Helvetica', sans-serif
@@ -20,7 +20,7 @@ $baseTypeFace: 'Helvetica', sans-serif
 html
 	font-size: 16px
 body
-	background: url(resources/banner.png) center no-repeat
+	// background: url(resources/banner1.png) center no-repeat
 	background-color: #babcbc
 	font: 62.5%/1.5 $baseTypeFace
 
@@ -40,15 +40,18 @@ h3
 	
 h4, a
 	color: #00ADEF
-	text-decoration: none 
-	
+	text-decoration: none
+
 h4, p
 	font-size: 1.5em
 	
 nav
+	margin-top: 10em
 	padding: 5em 0
 	text-align: center
 	background-color: #6A6A6A
+	// background: url(resources/knight_thon.png) no-repeat
+
 	@extend %clearfix
 	
 	ul
@@ -58,13 +61,12 @@ nav
 	
 	li
 		display: inline-block
-		font-size: 1.6em
+		font-size: 1.8em
 		font-weight: bold
 		padding: 0 1em
 
 section
 	margin: 1em auto
-	background: rgba(106, 106, 106, 0.50)
 	max-width: 1000px
 	
 footer
@@ -79,8 +81,7 @@ footer
 .main article
 	margin: 4em auto
 	max-width: 1000px
-	padding: 1em
-
+	
 
 .content-area
 	margin: auto
