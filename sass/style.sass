@@ -20,7 +20,7 @@ $baseTypeFace: 'Helvetica', sans-serif
 html
 	font-size: 16px
 body
-	// background: url(resources/banner1.png) center no-repeat
+	background: url(resources/banner1.png) center no-repeat
 	background-color: #babcbc
 	font: 62.5%/1.5 $baseTypeFace
 
@@ -46,10 +46,11 @@ h4, p
 	font-size: 1.5em
 	
 nav
-	margin-top: 10em
-	padding: 5em 0
+	margin-top: 3em
+	padding: 0.5em 0
 	text-align: center
-	background-color: #6A6A6A
+	background-color: #ffffff
+	border-radius: 10px
 	// background: url(resources/knight_thon.png) no-repeat
 
 	@extend %clearfix
@@ -64,6 +65,9 @@ nav
 		font-size: 1.8em
 		font-weight: bold
 		padding: 0 1em
+
+	.current a
+		background: url(resources/page_locator.png) center no-repeat
 
 section
 	margin: 1em auto
@@ -85,7 +89,9 @@ footer
 
 .content-area
 	margin: auto
-	width: 100%
+	width: 75%
+	background: rgba(106, 106, 106, 0.85)
+	border-radius: 20px
 
 
 // Clearfix (to use, @extend %clearfix)
