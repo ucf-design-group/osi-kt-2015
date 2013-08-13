@@ -18,7 +18,7 @@
 						$hospitalLoop->the_post();
 						$title = get_the_title();
 						$content = get_the_content();
-						$image = get_the_post_thumbnail($post->ID, 'thumbnail');
+						$image = get_the_post_thumbnail($post->ID, 'large');
 ?>	
 					<article class="hospital">
 						<?php echo $image; ?>
