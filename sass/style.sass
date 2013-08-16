@@ -10,7 +10,7 @@
  */
 
 // Necessary imports, feel free to explore and hack though :)
-@import reset, menu, buttons, footer, hospitals, contact
+@import reset, menu, buttons, footer, hospitals, contact, home
 
 // Base variables
 $baseTypeFace: 'Helvetica', sans-serif
@@ -92,6 +92,7 @@ footer
 	width: 75%
 	background: rgba(106, 106, 106, 0.85)
 	border-radius: 20px
+	@extend %clearfix
 
 
 // Clearfix (to use, @extend %clearfix)

@@ -11,18 +11,14 @@ get_header(); ?>
 					} ?>
 				</div>
 
-				<section class="Timer">
-
-<?php
-
-				$target = mktime(0, 0, 0, 4, 15, 2014) ;
-				$today = time () ;
-				$difference =($target-$today) ;
-				$days =(int) ($difference/86400) ;
-				$hours =(int) ($difference/3600) ;
-				print "Our event will occur in $days days $hours hours";
-
-?>				
-				</section>
+				<div class="countdown_timer">
+					<div id="countdown"></div>
+					<div class="labels">
+						<h3>Days</h3>
+						<h3>Hours</h3>
+						<h3>Minutes</h3>
+						<h3>Seconds</h3>
+					</div>
+				</div>
 			</div>
 <?php get_footer(); ?>
