@@ -30,6 +30,9 @@ function adjustNav() {
 
 $(document).ready(function () {
 
+
+	timer();
+	setInterval(function(){timer()}, 1000); 
 	adjustNav();
 
 	$(".menu-toggle").click(function (evt) {
@@ -49,13 +52,15 @@ $(window).resize(function () {
 
 //Countdown Timer
 
-var target_date = new Date("April 5, 2014").getTime();
+
  
-var days, hours, minutes, seconds;
+function timer() {
+
+	var target_date = new Date("April 5, 2014").getTime();
  
-var countdown = document.getElementById("countdown");
+	var days, hours, minutes, seconds;
  
-setInterval(function () {
+	var countdown = document.getElementById("countdown");
  
     var current_date = new Date().getTime();
     var seconds_left = (target_date - current_date) / 1000;
@@ -72,6 +77,6 @@ setInterval(function () {
     countdown.innerHTML = days + " " + hours + " "
     + minutes + " " + seconds + " ";  
  
-}, 1000);
+}
 
  
