@@ -62,15 +62,18 @@ Look for emails for new colors and new header photos
 
 Modify Aside to include links to helpmakemiracles.org (donate, support, register, login) and to include social/contact info
 
+Use call to actions and icons on Aside to draw attention to DONATE/Sign Up Links
+
 
 ## Design Ideas
 Watercolor instead of paint strokes background
 
-Grayscale Images Gray tones with Neon accents
+White background Images with opacity and white tones
 
-Mess with transparency/opacity
+Black content area with transparency
 
-Icons
+Neon Accent Tones
+
 
 Neon Colors
 

@@ -10,7 +10,7 @@
  */
 
 // Necessary imports, feel free to explore and hack though :)
-@import reset, menu, buttons, footer, hospitals, contact, home, events
+@import reset, menu, buttons, footer, hospitals, contact, home, events, children
 
 // Base variables
 $baseTypeFace: 'Helvetica', sans-serif
@@ -20,7 +20,7 @@ $baseTypeFace: 'Helvetica', sans-serif
 html
 	font-size: 16px
 body
-	background-color: #babcbc
+	background-color: #ffffff
 	font: 62.5%/1.5 $baseTypeFace
 
 h1
@@ -43,14 +43,12 @@ h4, a
 
 h4, p
 	font-size: 1.5em
+	color: white
 	
 nav
-	margin-top: 3em
-	padding: 0.5em 0
+	font-size: 1.5em
 	text-align: center
-	background-color: #ffffff
-	border-radius: 10px
-	// background: url(resources/knight_thon.png) no-repeat
+	border: 1px solid black
 
 	@extend %clearfix
 	
@@ -89,8 +87,6 @@ footer
 .content-area
 	margin: auto
 	width: 100%
-	background: rgba(106, 106, 106, 0.85)
-	border-radius: 20px
 	@extend %clearfix
 
 
