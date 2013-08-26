@@ -137,6 +137,17 @@ function custom_post_types() {
 		'taxonomies' => array(),
 		'has_archive' => false
 		));
+
+		register_post_type('sponsors', array(
+		'labels' => array(
+			'name' => 'Sponsors',
+			'singular_name' => 'Sponsor'),
+		'public' => true,
+		'hierarchical' => false,
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'taxonomies' => array(),
+		'has_archive' => false
+		));
 }
 add_action('init', 'custom_post_types');
 
@@ -171,6 +182,7 @@ include("functions/functions-nav.php");
 include("functions/functions-board.php");
 include("functions/functions-children.php");
 include("functions/functions-hospitals.php");
+include("functions/functions-sponsors.php");
 
 
 ?>
