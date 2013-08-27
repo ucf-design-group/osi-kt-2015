@@ -8,9 +8,6 @@
 						get_template_part( 'content', 'page' );
 					} ?>
 				</div>
-				<!-- <aside> -->
-					<!-- OPTIONAL -->
-				<!-- </aside> -->
 			</div>
 
 <?php get_footer(); ?>
