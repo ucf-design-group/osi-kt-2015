@@ -5,7 +5,34 @@
 		background-size: 100% 
 		background-position: top
 		
-		.main
-			background: rgba(0, 0, 0, 0.75)
-			border-radius: 20px
-			padding: 1em
+		section.content
+		
+			article.contact
+				width: 50%
+				float: left
+				// @extend %clearfix
+
+			article.exec-board
+				padding: 1em
+				width: 100%
+				clear: left
+				@extend %clearfix
+
+
+				article.leader
+					float: left
+					margin-bottom: 2em
+					width: 50%
+				
+					img
+						border: 3px solid #ffffff
+						border-radius: 10px
+						float: left
+						margin-right: 1em
+
+					&:nth-child(2n)
+						clear: left
+						padding-right: 4em
+					&:nth-child(2n+1)
+						clear: right
+						padding-left: 4em
