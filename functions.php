@@ -127,13 +127,13 @@ function custom_post_types() {
 		'has_archive' => false
 		));
 
-		register_post_type('fb-albums', array(
+		register_post_type('sidebar-items', array(
 		'labels' => array(
-			'name' => 'FB Albums',
-			'singular_name' => 'FB Album'),
+			'name' => 'Sidebar Items',
+			'singular_name' => 'Sidebar Item'),
 		'public' => true,
 		'hierarchical' => false,
-		'supports' => array('title'),
+		'supports' => array('title', 'editor', 'thumbnail'),
 		'taxonomies' => array(),
 		'has_archive' => false
 		));
@@ -180,7 +180,7 @@ function cpt_icons() {
 
 include("functions/functions-nav.php");
 include("functions/functions-board.php");
-include("functions/functions-children.php");
+include("functions/functions-sidebar.php");
 include("functions/functions-hospitals.php");
 include("functions/functions-sponsors.php");
 
