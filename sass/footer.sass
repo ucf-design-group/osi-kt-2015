@@ -17,11 +17,15 @@ $ucf_offset: ($osi_width) / ($total_width - $ucf_width) * 100%
 $sga_offset: ($osi_width + $ucf_width) / ($total_width - $sga_width) * 100%
 $dg_offset: 100%
 
+$transparent: rgba(0, 0, 0, 0.75)
+$fallback: rgb(49, 49, 49)
+
 footer
 	padding: 2em 0
 	text-align: center
 	width: 100%
-	background: rgba(0, 0, 0, 0.75)
+	background: $fallback
+	background: $transparent
 	
 	p
 		margin-top: 2em
