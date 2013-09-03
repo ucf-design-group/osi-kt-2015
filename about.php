@@ -1,9 +1,9 @@
-<?php /* Template Name: Home */
+<?php /* Template Name: About */
 
 get_header(); ?>
 
 			<div class="content-area">
-				<div class="main">
+				<div class="main"> 
 					<aside>
 <?php
 						$sidebarLoop = new WP_Query(array('post_type' => 'sidebar-items', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'sidebar-form-order'));
@@ -26,17 +26,9 @@ get_header(); ?>
 					<?php
 					while (have_posts()) {
 						the_post();
-						get_template_part( 'content', 'home' );
+						get_template_part( 'content', 'page' );
 					} ?>
-					<iframe src="http://player.vimeo.com/video/49281355" width="700" height="482" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-
-					<div class="countdown-timer">
-						<div id="days"></div>
-						<div id="hours"></div>
-						<div id="minutes"></div>
-						<div id="seconds"></div>
-						<h1>Until Knight-Thon</h1>
-					</div>
 				</div>
 			</div>
+
 <?php get_footer(); ?>

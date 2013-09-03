@@ -133,7 +133,7 @@ function custom_post_types() {
 			'singular_name' => 'Sidebar Item'),
 		'public' => true,
 		'hierarchical' => false,
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'supports' => array('title', 'editor'),
 		'taxonomies' => array(),
 		'has_archive' => false
 		));
