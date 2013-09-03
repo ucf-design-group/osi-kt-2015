@@ -12,7 +12,7 @@ function sidebar_meta_add() {
  
 	add_meta_box (
 	'sidebar_meta',
-	'Child Information',
+	'Sidebar Information',
 	'sidebar_meta',
 	'sidebar-items',
 	'normal',
@@ -25,6 +25,7 @@ function sidebar_meta() {
 	wp_nonce_field(basename( __FILE__ ), 'sidebar-form-nonce' );
 
 	$order = get_post_meta($post->ID, 'sidebar-form-order', true) ? get_post_meta($post->ID, 'sidebar-form-order', true) : '';
+	$url = get_post_meta($post->ID, 'sidebar-form-url', true) ? get_post_meta($post->ID, 'sidebar-form-url', true) : '';
 
 	?>
 	<style type="text/css">#sidebar-form-order{width: 50px;}#sidebar-form div{display:inline-block; padding:0 5px;}</style>
@@ -56,6 +57,7 @@ function sidebar_meta_save() {
 	$input = array();
 
 	$input['order'] = (isset($_POST['sidebar-form-order']) ? $_POST['sidebar-form-order'] : '');
+	$input['url'] = (isset($_POST['sidebar-form-url']) ? $_POST['sidebar-form-url'] : '');
 
 	$input['order'] = str_pad($input['order'], 3, "0", STR_PAD_LEFT);
 
