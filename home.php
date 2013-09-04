@@ -23,12 +23,7 @@ get_header(); ?>
 						}
 ?>
 					</aside>
-					<?php
-					while (have_posts()) {
-						the_post();
-						get_template_part( 'content', 'home' );
-					} ?>
-					<iframe src="http://player.vimeo.com/video/49281355" width="700" height="482" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
 
 					<div class="countdown-timer">
 						<div id="days"></div>
@@ -37,6 +32,14 @@ get_header(); ?>
 						<div id="seconds"></div>
 						<h1>Until Knight-Thon</h1>
 					</div>
+					
+					<?php
+					while (have_posts()) {
+						the_post();
+						get_template_part( 'content', 'home' );
+					} ?>
+					<iframe src="http://player.vimeo.com/video/49281355" width="700" height="482" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
 				</div>
 			</div>
 <?php get_footer(); ?>
