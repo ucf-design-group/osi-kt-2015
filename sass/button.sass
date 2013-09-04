@@ -9,7 +9,7 @@ $fallback: rgb(49, 49, 49)
 .button
 	// background: #EC008B //pink
 	border-radius: 5px
-	// border: 1px solid white
+	border: 1px solid white
 	// color: orange
 	box-shadow: 1px 1px 1px white
 	color: white
@@ -22,13 +22,16 @@ $fallback: rgb(49, 49, 49)
 	text-align: center
 	text-decoration: none
 	vertical-align: middle
-	width: 12.7em
+	width: 12.8em
 	// text-shadow: 1px 1px #000000
 
 
-article.sidebar-item
-	
 
+article.sidebar-item
+	margin: 2em auto 2em auto
+	clear: left
+	
+	
 	$n: 0
 
 	@each $color in $yellow, $green, $pink, $blue
@@ -39,3 +42,5 @@ article.sidebar-item
 
 			a.button
 				background-color: $color
+
+		&:nth-child

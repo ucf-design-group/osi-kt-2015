@@ -26,13 +26,16 @@ $fallback: rgb(49, 49, 49)
 html
 	font-size: 16px
 body
-	background-color: #ffffff
+	// background-color: #ffffff
 	font: 62.5%/1.5 $baseTypeFace
 	font-weight: 300
+	
+	@extend %clearfix
+
 
 header
 	// background-color: $transparent
-	// padding: 2em
+	padding: 1em
 
 h1
 	font-size: 3em
@@ -69,13 +72,13 @@ h4, p
 	color: white
 	
 nav
-	font-size: 1.5em
+	font-size: 1em
 	text-align: center
-	background-color: white
-	// box-shadow: 2px 3px 2px $fallback
-	// background-color: $transparent
-	// border-radius: 15px
-	// border-bottom: 1px solid $transparent
+	padding: 1em
+	background-color: $transparent
+	// box-shadow: 1px 2px 1px $fallback
+	border-radius: 15px
+	// border: 1px solid $transparent
 
 	@extend %clearfix
 	
@@ -88,7 +91,7 @@ nav
 		display: inline-block
 		font-size: 1.8em
 		// font-weight: bold
-		padding: 0 1em
+		padding: 0 2.5em
 			
 	.current
 		background: url(resources/page_locator.png) center no-repeat
@@ -100,7 +103,7 @@ nav
 	background: $fallback
 	background: $transparent
 	border-radius: 15px
-	margin: 0em auto 1em auto
+	margin: 5em auto 1em auto
 	max-width: 1000px
 	padding: 1em
 	// box-shadow: 2px 3px 2px $fallback
@@ -115,15 +118,23 @@ footer
 		margin: auto
 		max-width: 1000px
 	
+.main section
+	width: 70%
+	// border: 1px solid white
+
 .main article
-	margin: 4em auto
-	max-width: 1000px
+	width: 75%
+
+.main aside
+	display: inline-block
+	width: 25%
+	// margin: 5em
+	float: right
+	// border: 1px solid white
 	
 
 .content-area
-	margin: auto
-	width: 100%
-	@extend %clearfix
+
 
 
 // Clearfix (to use, @extend %clearfix)
