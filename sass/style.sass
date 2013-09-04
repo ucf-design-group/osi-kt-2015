@@ -10,11 +10,11 @@
  */
 
 // Necessary imports, feel free to explore and hack though :)
-@import reset, menu, button, footer, hospitals, contact, home, events, children, sponsors, about, get-involved
+@import reset, menu, button, footer, hospitals, contact, home, events, children, sponsors, about, join-in
 @import url("http://fonts.googleapis.com/css?family=Covered+By+Your+Grace")
 
 // Base variables
-$baseTypeFace: 'Helvetica', sans-serif
+$baseTypeFace: Helvetica, sans-serif
 $yellow: #F8ED31
 $green: #99cc33
 $pink: #EC008B
@@ -32,25 +32,37 @@ body
 
 header
 	// background-color: $transparent
-	padding: 2em
+	// padding: 2em
 
 h1
 	font-size: 3em
-	color: $green
+	color: $pink
 	// font-weight: 700
 	
 h2
-	color: $yellow
+	color: $green
 	font-size: 2.4em
 	margin-bottom: 1em
 	
 h3
-	color: $blue
+	color: $yellow
 	font-size: 1.8em
 	
-h4, a
-	color: $pink
+h4
+	color: $blue
+	
+a
+	color: $blue
+	font-weight: 500
 	text-decoration: none
+	-webkit-transition: color 0.5s ease-in-out
+	-moz-transition: color 0.5s ease-in-out
+	-ms-transition: color 0.5s ease-in-out
+	-o-transition: color 0.5s ease-in-out
+	transition: color 0.5s ease-in-out
+	
+	&:hover
+		color: lighten($blue, 30%)
 
 h4, p
 	font-size: 1.5em
@@ -59,10 +71,11 @@ h4, p
 nav
 	font-size: 1.5em
 	text-align: center
-	// border: 1px solid black
-	background-color: $transparent
-	border-radius: 10px
-	// border: 10px solid $transparent
+	background-color: white
+	// box-shadow: 2px 3px 2px $fallback
+	// background-color: $transparent
+	// border-radius: 15px
+	// border-bottom: 1px solid $transparent
 
 	@extend %clearfix
 	
@@ -76,17 +89,22 @@ nav
 		font-size: 1.8em
 		// font-weight: bold
 		padding: 0 1em
-
+			
 	.current
 		background: url(resources/page_locator.png) center no-repeat
+		a
+			color: white
+			font-weight: 500
 
 .main
 	background: $fallback
 	background: $transparent
-	border-radius: 20px
-	margin: 1em auto
+	border-radius: 15px
+	margin: 0em auto 1em auto
 	max-width: 1000px
 	padding: 1em
+	// box-shadow: 2px 3px 2px $fallback
+
 	
 footer
 	color: #eeeeee

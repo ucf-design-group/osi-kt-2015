@@ -1,21 +1,41 @@
+$yellow: #F8ED31
+$green: #99cc33
+$pink: #EC008B
+$blue: #00ADEF
+$transparent: rgba(0, 0, 0, 0.75)
+$fallback: rgb(49, 49, 49)
+
+
 .button
-	background: url(resources/page_locator.png) center no-repeat
-	// border-radius: 3px
-	// box-shadow: 2px 3px 1px #a75312
-	color: #ffffff
+	// background: #EC008B //pink
+	border-radius: 5px
+	// border: 1px solid white
+	// color: orange
+	box-shadow: 1px 1px 1px white
+	color: white
 	cursor: pointer
 	display: inline-block
 	font-size: 1.6em
-	font-weight: 300
+	// font-weight: 700
 	letter-spacing: 1px
 	padding: 10px
 	text-align: center
 	text-decoration: none
 	vertical-align: middle
-	// width: 6em
+	width: 12.7em
+	// text-shadow: 1px 1px #000000
 
-	&:hover
-		// box-shadow: 1px 2px 1px #a75312
-		position: relative
-		left: 1px
-		top: 1px
+
+article.sidebar-item
+	
+
+	$n: 0
+
+	@each $color in $yellow, $green, $pink, $blue
+
+		$n: $n+1
+
+		&:nth-child(#{$n})
+
+			a.button
+				background-color: $color
