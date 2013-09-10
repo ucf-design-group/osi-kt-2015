@@ -1,12 +1,21 @@
+$baseTypeFace: Helvetica, sans-serif
+$yellow: #F8ED31
+$green: #99cc33
+$pink: #EC008B
+$blue: #00ADEF 
+$transparent: rgba(0, 0, 0, 0.75)
+$fallback: rgb(49, 49, 49)
+
 .page-about
 
-body.page-about
-	background: url(resources/banner1.png) no-repeat center
-	background-size: 100%
-	background-position: 0% 0%
+	background-image: url(resources/banner1.png)
 
-	.content-area
-		// background: url(resources/banner1.png) no-repeat
-		// background-size: 100%
-		// background-position: top
+	a.button
+		background-color: $yellow
+		box-shadow: 2px 3px 1px darken($yellow, 25%)
 
+	a.children
+		margin: 1em 0em 1em 0em
+		width: 20em
+		text-align: center
+		display: block

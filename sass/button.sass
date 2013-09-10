@@ -9,10 +9,10 @@ $fallback: rgb(49, 49, 49)
 .button
 	// background: #EC008B //pink
 	border-radius: 5px
-	border: 1px solid white
+	// border: 1px solid white
 	// color: orange
-	box-shadow: 1px 1px 1px white
-	color: white
+	// box-shadow: 2px 3px 3px white
+	color: #000000
 	cursor: pointer
 	display: inline-block
 	font-size: 1.6em
@@ -23,18 +23,30 @@ $fallback: rgb(49, 49, 49)
 	text-decoration: none
 	vertical-align: middle
 	width: 12.8em
+	// box-shadow: 1px 2px 1px white
+
 	// text-shadow: 1px 1px #000000
 
+	&:hover
+		color: white
+		// box-shadow: 1px 2px 1px white
+		position: relative
+		left: 1px
+		top: 1px
+
+article.leader, article.child
+	a
+		display: block
 
 
-article.sidebar-item
-	margin: 2em auto 2em auto
+article.sidebar-item, article.leader, article.child
+	margin: 1em auto
 	clear: left
 	
 	
 	$n: 0
 
-	@each $color in $yellow, $green, $pink, $blue
+	@each $color in $pink, $yellow, $blue, $green
 
 		$n: $n+1
 
@@ -42,5 +54,18 @@ article.sidebar-item
 
 			a.button
 				background-color: $color
+				// border: 1px solid darken($color, 20%)
+				box-shadow: 2px 3px 1px darken($color, 25%)
 
-		&:nth-child
+				@if $n % 2 == 1
+
+					color: #ffffff
+
+					&:hover
+						color: #000000
+				
+				&:hover
+					box-shadow: 1px 2px 1px darken($color, 25%)
+					position: relative
+					left: 1px
+					top: 1px

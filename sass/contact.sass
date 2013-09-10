@@ -1,42 +1,65 @@
 .page-contact
 
-body.page-contact
-	background: url(resources/banner1.png) no-repeat center	
-	background-size: 100%
-	background-position: 0% 0%
+	background-image: url(resources/banner1.png)
 
-	.content-area
-		// background: url(resources/banner1.png) no-repeat
-		// background-size: 100% 
-		// background-position: top
+
+	section.contact
+		width: 50%
+		float: left
+
+
+	section.exec-board
+		padding: 1em
+		width: 100%
+		clear: left
+		@extend %clearfix
+
+
+	article.leader
+		float: left
+		margin-bottom: 2em
+		width: 50%
+		text-align: center
+
+
+		a
+			margin: auto
+
+		.email
+			font-size: 1.7em
+			margin: 0em 0em 0.5em 0em
+	
+		img
+			display: block
+			border: 3px solid #ffffff
+			border-radius: 10px
+			// float: left
+			margin: 0em auto 1em auto
+		h3
+			clear: left
+			margin-bottom: 0.5em
+		p
+			font-size: 2em
+			clear: left
+
+		&:nth-child(2n)
+			clear: left
+			// padding-right: 4em
+
+		&:nth-child(2n+1)
+			clear: right
+			// padding-left: 4em
+
+	@media screen and (max-width: 490px)
+
 		
-		section.content
-		
-			article.contact
-				width: 50%
-				float: left
+		section.contact
+			width: 100%
+			text-align: center
 
-			article.exec-board
-				padding: 1em
-				width: 100%
-				clear: left
-				@extend %clearfix
+		article.leader
+			float: none
+			width: 100% 
+			// margin: auto
 
 
-				article.leader
-					float: left
-					margin-bottom: 2em
-					width: 50%
-				
-					img
-						border: 3px solid #ffffff
-						border-radius: 10px
-						float: left
-						margin-right: 1em
-
-					&:nth-child(2n)
-						clear: left
-						padding-right: 4em
-					&:nth-child(2n+1)
-						clear: right
-						padding-left: 4em

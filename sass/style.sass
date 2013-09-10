@@ -14,11 +14,12 @@
 @import url("http://fonts.googleapis.com/css?family=Covered+By+Your+Grace")
 
 // Base variables
-$baseTypeFace: Helvetica, sans-serif
+$baseTypeFace: "proxima-nova", sans-serif
+$bodyTypeFace: "ff-meta-web-pro"
 $yellow: #F8ED31
 $green: #99cc33
 $pink: #EC008B
-$blue: #00ADEF
+$blue: #00ADEF 
 $transparent: rgba(0, 0, 0, 0.75)
 $fallback: rgb(49, 49, 49)
 
@@ -26,87 +27,81 @@ $fallback: rgb(49, 49, 49)
 html
 	font-size: 16px
 body
-	// background-color: #ffffff
+
+	background-position: 50% 40px
+	background-repeat: no-repeat
+	background-size: 100%
 	font: 62.5%/1.5 $baseTypeFace
-	font-weight: 300
+	font-weight: 100
 	
 	@extend %clearfix
 
 
 header
-	// background-color: $transparent
-	padding: 1em
-
+	padding: 2em 0 27em 0
+	background-image: url(resources/knight-thon-logo.png)
+	background-repeat: no-repeat
+	background-position: bottom
+	margin: auto
 h1
 	font-size: 3em
-	color: $pink
-	// font-weight: 700
+	color: $green
+	margin-bottom: 1em
+	font-weight: 400
 	
 h2
-	color: $green
+	color: $pink
 	font-size: 2.4em
-	margin-bottom: 1em
-	
+	font-weight: 300
+
+
 h3
 	color: $yellow
-	font-size: 1.8em
+	font-size: 1.9em
+	font-weight: 300
+
 	
 h4
 	color: $blue
+
+p
+	font-family: $bodyTypeFace
+	font-weight: 400
+
 	
 a
 	color: $blue
-	font-weight: 500
+	font-weight: 300
+	// font-family: $bodyTypeFace
 	text-decoration: none
 	-webkit-transition: color 0.5s ease-in-out
 	-moz-transition: color 0.5s ease-in-out
 	-ms-transition: color 0.5s ease-in-out
 	-o-transition: color 0.5s ease-in-out
 	transition: color 0.5s ease-in-out
-	
+
 	&:hover
 		color: lighten($blue, 30%)
 
-h4, p
+h4, p, li
 	font-size: 1.5em
-	color: white
-	
-nav
-	font-size: 1em
-	text-align: center
-	padding: 1em
-	background-color: $transparent
-	// box-shadow: 1px 2px 1px $fallback
-	border-radius: 15px
-	// border: 1px solid $transparent
+	color: #ffffff
 
-	@extend %clearfix
-	
-	ul
-		display: block
-		margin: auto
-		text-align: center
-	
-	li
-		display: inline-block
-		font-size: 1.8em
-		// font-weight: bold
-		padding: 0 2.5em
-			
-	.current
-		background: url(resources/page_locator.png) center no-repeat
-		a
-			color: white
-			font-weight: 500
+ol
+	list-style-type: decimal
+
 
 .main
 	background: $fallback
 	background: $transparent
-	border-radius: 15px
-	margin: 5em auto 1em auto
+	border-radius: 10px
+	margin: 1em auto 1em auto
 	max-width: 1000px
 	padding: 1em
+	position: relative
 	// box-shadow: 2px 3px 2px $fallback
+	
+	@extend %clearfix
 
 	
 footer
@@ -117,24 +112,45 @@ footer
 		display: block
 		margin: auto
 		max-width: 1000px
-	
-.main section
-	width: 70%
-	// border: 1px solid white
 
-.main article
-	width: 75%
 
-.main aside
-	display: inline-block
-	width: 25%
-	// margin: 5em
+aside
 	float: right
-	// border: 1px solid white
+	margin-right: 0
+	margin-left: auto
+	padding: 10px
+	width: 250px
+	text-align: center
 	
+.aside-placeholder
+	clear: both
+	height: 0
+	width: 100%
+	
+div.fancybox
+	max-width: 500px
+	background-color: $fallback
+	padding: 1em
+	text-align: center
+
+
+	img
+		border-radius: 10px
+		margin: 0em auto 1em auto
+		border 1px solid #ffffff
+	
+	p
+		color: #ffffff
+		text-align: left
+	h3
+		color: $yellow
+		margin-bottom: 0.5em
+
+
 
 .content-area
-
+	
+	@extend %clearfix
 
 
 // Clearfix (to use, @extend %clearfix)
@@ -145,3 +161,35 @@ footer
 		display: table 
 	&:after
 		clear: both
+		
+
+@media screen and (max-width: 1000px)
+	
+	body
+		background-size: auto
+		
+@media screen and (max-width: 700px)
+
+	.aside-placeholder
+		height: 150px
+		margin-top: 1em
+
+	aside
+		float: none
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		
+		article.sidebar-item
+			display: inline-block
+			margin-left: 1em
+			margin-right: 1em
+
+@media screen and (max-width: 490px)
+	
+	.aside-placeholder
+		height: 260px
+
+	aside article.sidebar-item
+		display: block

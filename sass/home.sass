@@ -6,21 +6,30 @@ $blue: #00ADEF
 
 .page-home
 	
-	body.page-sponsors
-	background: url(resources/banner2.png) no-repeat center	
-	background-size: 100%
-	background-position: 0% 0%
+	background-image: url(resources/banner2.png)
+	text-align: center
+	
+	section
+		float: none
+		width: 100%
+		
+		article
+			margin: 1em
 
+	.sidebar-item
+		display: inline-block
+		width: auto
 
 	.countdown-timer
-		font-family: 'Covered By Your Grace', cursive
+		font-family: "Covered By Your Grace", cursive
 		font-size: 10px
 		text-align: center
 		text-shadow: 2px 2px #000000
 
 		div
 			display: inline-block
-			padding: 20px
+			font-size: 14em
+			width: 1.25em
 
 		.countdown-label
 			color: #ffffff
@@ -29,32 +38,80 @@ $blue: #00ADEF
 			font-size: 2rem
 
 		#days
-			font-size: 20em
 			color: $pink //#db4844
 
-		#hours 
-			font-size: 16em
+		#hours
 			color: $yellow //#f07c22
 
 		#minutes
-			font-size: 12em
 			color: $blue //#f6da74
 
 		#seconds
-			font-size: 8em
 			color: $green //#abcd58
 			
 		h1
 			color: #ffffff
 			font-size: 7em
 	
-	.main
-		text-align: center
+	.vimeo-wrap
+		
+		margin: 1em auto
+		width: 93.5%
+		max-height: 450px
+		max-width: 700px
+		
+		div
+			padding-top: 450 / 700 * 100%
+			position: relative
 		
 		iframe
-			margin: auto
+			height: 100%
+			width: 100%
 			
-	// h1
-	// 	color: #ffffff
-	// 	font-family: 'Covered By Your Grace', cursive
-	// 	font-size: 40px
+			position: absolute
+			top: 0
+			left: 0
+			
+	
+	@media screen and (max-width: 780px)
+		
+		.countdown-timer div
+			font-size: 12em
+			
+	@media screen and (max-width: 660px)
+		
+		.countdown-timer div
+			font-size: 10em
+			
+	@media screen and (max-width: 540px)
+		
+		.countdown-timer
+
+			div
+				font-size: 8em
+		
+			.countdown-label
+				font-size: 26px
+			
+			h1
+				font-size: 5em
+			
+	@media screen and (max-width: 450px)
+		
+		.countdown-timer
+
+			div
+				font-size: 6em
+			
+			.countdown-label
+				font-size: 20px
+	
+	@media screen and (max-width: 350px)
+		
+		.countdown-timer
+
+			div
+				width: 1em
+				
+			h1
+				font-size: 4em
