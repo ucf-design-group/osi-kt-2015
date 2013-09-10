@@ -7,7 +7,7 @@
  */
 
 ?>
-<article>
+<article id="main">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 
 

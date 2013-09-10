@@ -30,9 +30,9 @@
 					} ?>
 				
 				
-					<section class ="children">
+					<section class="children">
 <?php
-						$childrenLoop = new WP_QUERY(array('post_type' => 'children', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'child-form-order'));
+						$childrenLoop = new WP_QUERY(array('post_type' => 'children', 'posts_per_page' => -1, 'orderby' => 'name', 'order' => 'ASC'));
 						while ($childrenLoop->have_posts()) {
 							$childrenLoop->the_post();
 							$title = get_the_title();
@@ -40,14 +40,20 @@
 							$image = get_the_post_thumbnail($post->ID, 'small');
 ?>	
 						<article class="child">
-							<?php echo $image; ?>
 							<h3><?php echo $title; ?></h3>
-							<p><?php echo $content; ?><p>
+							<?php echo $image; ?>
+							<a class = "fancybox button" href="#child-bio-<?php echo $post->post_name;?>" id="child-expand">Show Bio</a>
+							<div class="fancybox" id="child-bio-<?php echo $post->post_name;?>">
+								<h3><?php echo $title;?></h3>
+								<?php echo $image; ?>
+								<p><?php echo $content; ?></p>
+							</div>
 						</article>
-<?php 				}
+<?php 					}
 ?>
 					</section>
 
+					<div class="aside-placeholder"></div>
 				</div>
 			</div>
 

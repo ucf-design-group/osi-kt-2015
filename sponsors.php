@@ -29,14 +29,14 @@
 						get_template_part( 'content', 'page' );
 					} ?>
 				
-					<section class ="sponsors">
+					<section class="sponsors">
 <?php
 						$sponsorsLoop = new WP_QUERY(array('post_type' => 'sponsors', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'sponsor-form-order'));
 						while ($sponsorsLoop->have_posts()) {
 							$sponsorsLoop->the_post();
 							$title = get_the_title();
 							$content = get_the_content();
-							$image = get_the_post_thumbnail($post->ID, 'small');
+							$image = get_the_post_thumbnail($post->ID, 'thumbnail');
 ?>	
 						<article class="sponsor">
 							<?php echo $image; ?>
@@ -47,6 +47,7 @@
 ?>
 					</section>
 
+					<div class="aside-placeholder"></div>
 				</div>
 			</div>
 

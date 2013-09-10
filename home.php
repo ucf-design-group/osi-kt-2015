@@ -4,7 +4,7 @@ get_header(); ?>
 
 			<div class="content-area">
 				<div class="main">
-					<aside>
+					<section>
 <?php
 						$sidebarLoop = new WP_Query(array('post_type' => 'sidebar-items', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'sidebar-form-order'));
 
@@ -22,7 +22,7 @@ get_header(); ?>
 <?php
 						}
 ?>
-					</aside>
+					</section>
 
 
 					<div class="countdown-timer">
@@ -38,7 +38,9 @@ get_header(); ?>
 						the_post();
 						get_template_part( 'content', 'home' );
 					} ?>
-					<iframe src="http://player.vimeo.com/video/49281355" width="700" height="482" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+					<div class="vimeo-wrap"><div>
+						<iframe src="http://player.vimeo.com/video/49281355" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+					</div></div>
 
 				</div>
 			</div>

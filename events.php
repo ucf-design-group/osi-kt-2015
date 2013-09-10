@@ -44,6 +44,7 @@ get_header(); ?>
 							$content = get_the_content();
 							$link = get_post_meta($post->ID, 'oe-form-url', true);
 							$image = get_the_post_thumbnail($post->ID, 'medium');
+							$image_url = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full');
 
 							if ($end == "none")
 								$dates = date('l F jS, g:ia', $start);
@@ -53,14 +54,14 @@ get_header(); ?>
 								$dates = date('F jS, g:ia', $start) . " to " . date('F jS, g:ia', $end);
 ?>	
 						<article class="event">
-							<?php echo $image; ?>
+							<a class="img fancybox" href="<?php echo $image_url[0]; ?>"><?php echo $image; ?></a>
 							<h3><?php echo $title; ?></h3>
 							<h4><?php echo $dates; ?></h4>
 							<p><?php echo $content; ?></p>
 <?php
 							if ($link != "") {
 ?>
-							<a href="<?php echo $link; ?>">Knight Connect!</a>
+							<p><a href="<?php echo $link; ?>" target="_blank">See more on Knight Connect!</a></p>
 <?php				}
 ?>
 						</article>
@@ -75,8 +76,9 @@ get_header(); ?>
 					}
 	?>
 
-					</section> 
+					</section>
 
+					<div class="aside-placeholder"></div>
 				</div>
 			</div>
 

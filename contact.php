@@ -30,8 +30,7 @@ get_header(); ?>
 					} ?>
 				
 				
-					<section class="content">
-						<article class="contact">
+						<section class="contact">
 							<h2>Contact Knight-Thon</h2>
 								<h3>Location:</h3>
 								<p>Knight-Thon's office is located on the second floor of the Student Union, inside The Office of Student Involvement, room 208.</p>
@@ -43,13 +42,13 @@ get_header(); ?>
 								<p><a href="mailto:knight-thon@ucf.edu">knight-thon@ucf.edu</a></p>
 								<h3>Mail:</h3>
 								<p>P.O. Box 163245, Orlando, FL 32816-3254</p>
-						</article>	
+						</section>	
 
 
 
 
 
-						<article class="exec-board">
+						<section class="exec-board">
 							<h2>Knight-Thon Executive Board</h2>
 <?php
 							$leaderLoop = new WP_QUERY(array('post_type' => 'exec-board', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'leader-form-order'));
@@ -62,17 +61,22 @@ get_header(); ?>
 								$email = get_post_meta($post->ID, 'leader-form-email', true);
 ?>	
 							<article class="leader">
-								<?php echo $image; ?>
 								<h3><?php echo $title; ?></h3>
-								<p><?php echo $position; ?><p>
-								<p><?php echo $content; ?><p>
+								<?php echo $image; ?>
+								<p><?php echo $position; ?></p>
 								<a class="email" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+								<a class = "fancybox button" href="#exec-bio-<?php echo $post->post_name;?>" id="exec-expand">Show Bio</a>
+								<div class="fancybox" id="exec-bio-<?php echo $post->post_name;?>">
+									<h3><?php echo $title;?></h3>
+									<?php echo $image; ?>
+									<p><?php echo $content; ?></p>
+								</div>
 							</article>
 <?php 				}
 ?>
-						</article>
-					</section>
-				
+						</section>
+
+					<div class="aside-placeholder"></div>
 				</div>
 			</div>
 
