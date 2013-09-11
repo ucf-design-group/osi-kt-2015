@@ -5,14 +5,11 @@
 // Navigation //
 ////////////////
 
-// Use this variable to set the breakpoint at which the menu changes.
-var breakPoint = 700;
-
 
 // This function uses CSS classes to change the appearance of the menu.
 function adjustNav() {
 
-	if ($(document).width < breakPoint) {
+	if ($(window).width() < 700) {
 
 		$("nav.main-menu").removeClass("full").addClass("compact");
 		$("nav.main-menu ul").hide();
@@ -30,17 +27,25 @@ function adjustNav() {
 
 $(document).ready(function () {
 
-
-	countdownTimer();
-	// setInterval(function(){timer()}, 1000);
-	setInterval(function() { countdownTimer(); }, 1000);
 	adjustNav();
+	countdownTimer();
 
 	$(".menu-toggle").click(function (evt) {
 
 		$("nav.main-menu ul").slideToggle();
 		evt.preventDefault();
-	})
+	});
+
+
+	$("div.fancybox").hide();
+	$("a.fancybox").fancybox();
+
+	$("#become-dancer").fancybox({type: 'ajax'});
+	$("#start-team").fancybox({type: 'ajax'});
+
+	$("a.fancybox").fancybox();
+
+	setInterval(function() { countdownTimer(); }, 1000);
 });
 
 
