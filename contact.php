@@ -56,7 +56,7 @@ get_header(); ?>
 								$leaderLoop->the_post();
 								$title = get_the_title();
 								$content = get_the_content();
-								$image = get_the_post_thumbnail($post->ID, 'small');
+								$image = get_the_post_thumbnail($post->ID, 'thumbnail');
 								$position = get_post_meta($post->ID, 'leader-form-position', true);
 								$email = get_post_meta($post->ID, 'leader-form-email', true);
 ?>	

@@ -1,4 +1,4 @@
-<?php /* Template Name: Get Involved */
+<?php /* Template Name: Join In */
 
 get_header(); ?>
 

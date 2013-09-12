@@ -6,7 +6,7 @@ get_header(); ?>
 				<div class="main">
 					<section>
 <?php
-						$sidebarLoop = new WP_Query(array('post_type' => 'sidebar-items', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'sidebar-form-order'));
+						$sidebarLoop = new WP_Query(array('post_type' => 'sidebar-items', 'posts_per_page' => 4, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'sidebar-form-order'));
 
 						while ($sidebarLoop->have_posts()) {
 
@@ -38,9 +38,9 @@ get_header(); ?>
 						the_post();
 						get_template_part( 'content', 'home' );
 					} ?>
-					<div class="vimeo-wrap"><div>
+<!-- 					<div class="vimeo-wrap"><div>
 						<iframe src="http://player.vimeo.com/video/49281355" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-					</div></div>
+					</div></div> -->
 
 				</div>
 			</div>
