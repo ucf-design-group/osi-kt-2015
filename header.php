@@ -52,5 +52,6 @@
 						
 					</ul>
 				</nav>
+				<a class"logo" href="<?php echo site_url();?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/knight-thon-logo.png" alt="knight-thon"></a>
 			</header>
 <!-- HEADER END -->

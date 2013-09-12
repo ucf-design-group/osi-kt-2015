@@ -37,7 +37,7 @@
 							$childrenLoop->the_post();
 							$title = get_the_title();
 							$content = get_the_content();
-							$image = get_the_post_thumbnail($post->ID, 'small');
+							$image = get_the_post_thumbnail($post->ID, 'thumbnail');
 ?>	
 						<article class="child">
 							<h3><?php echo $title; ?></h3>
