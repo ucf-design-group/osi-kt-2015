@@ -10,6 +10,8 @@ $register: url(resources/register.png)
 $login: url(resources/login.png)
 $facebook: url(resources/facebook.png)
 $twitter: url(resources/twitter.png)
+$instagram: url(resources/facebook.png)
+
 
 
 .button
@@ -39,10 +41,26 @@ article.leader, article.child
 
 article.sidebar-item, article.leader, article.child
 	margin: 1em auto
-	clear: left
+	// clear: left
 
 	$n: 0
-	@each $image in $donate, $support, $register, $login, $facebook, $twitter
+	@each $icons in	$facebook, $twitter, $instagram
+		$n: $n+1
+
+		a.icon
+
+			&:nth-child(#{$n})
+				background-image: $icons					
+				background-repeat: no-repeat
+				border-radius: 50%
+				width: 32px
+				height: 32px
+				display: inline-block
+				text-indent: -9999px
+				margin: 1em 1em 0em 1em
+
+	$n: 0
+	@each $image in $donate, $support, $register, $login
 		$n: $n+1
 
 		&:nth-child(#{$n})
@@ -53,25 +71,13 @@ article.sidebar-item, article.leader, article.child
 				background-repeat: no-repeat
 				background-position: 10px 10px
 
-			a.icon
-				background-image: $image					
-				background-repeat: no-repeat
-				border-radius: 50%
-				width: 32px
-				height: 32px
-				display: block
-				text-indent: -9999px
-				float: left
-				clear: left
-				margin: 1em auto 1em auto
-				position: relative
-
+			
 	
 	$n: 0
-	@each $color in $pink, $yellow, $blue, $green, $pink, $blue
+	@each $color in $pink, $yellow, $blue, $green
 		$n: $n+1
 
-		&:nth-child(#{$n})
+		&:nth-child(4n+#{$n})
 
 			a.button
 				background-color: $color

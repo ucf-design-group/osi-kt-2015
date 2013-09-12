@@ -18,19 +18,18 @@
 	article.leader
 		float: left
 		margin-bottom: 2em
-		width: 50%
+		width: 33%
 		text-align: center
 
 		a.button
 			background-image: none	
 
 
-
 		a
 			margin: auto
 
 		.email
-			font-size: 1.7em
+			font-size: 1.5em
 			margin: 0em 0em 0.5em 0em
 	
 		img
@@ -40,19 +39,23 @@
 			// float: left
 			margin: 0em auto 1em auto
 		h3
-			clear: left
+			// clear: left
 			margin-bottom: 0.5em
 		p
-			font-size: 2em
-			clear: left
+			font-size: 1.7em
+			// clear: left
 
-		&:nth-child(2n)
-			clear: left
+		&:nth-child(3n)
+			// clear: left
 			// padding-right: 4em
 
-		&:nth-child(2n+1)
+		&:nth-child(3n+1)
 			clear: right
 			// padding-left: 4em
+	@media screen and (max-width: 690px)
+		article.leader
+			width: 50% 
+
 
 	@media screen and (max-width: 490px)
 
@@ -61,9 +64,14 @@
 			width: 100%
 			text-align: center
 
+		section.exec-board
+			width: 100%
+			text-align: center
+			
 		article.leader
 			float: none
 			width: 100% 
+
 			// margin: auto
 
 
