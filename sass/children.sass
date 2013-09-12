@@ -3,9 +3,41 @@
 	background-image: url(resources/banner3.png)
 
 
+	section.children
+		padding: 1em
+		width: 100%
+		clear: left
+		@extend %clearfix
+
 	article.child
+		float: left
+		margin-bottom: 2em
+		width: 33%
+		text-align: center
+
+		&:nth-child(3n)
+			// clear: left
+			// padding-right: 4em
+
+		&:nth-child(3n+1)
+			clear: right
+			// padding-left: 4em
+
 		img
-			margin: 0em 0em 1em 0em
+			margin: 1em auto 2em auto
+			display: block
+			border: 3px solid #ffffff
+			border-radius: 10px
 
 		a.button
-			background-image: none	
+			background-image: none
+			margin: 0 auto 0 auto
+
+	@media screen and (max-width: 700px)
+		article.child
+			width: 50% 
+
+	@media screen and (max-width: 480px)
+		article.child
+			width: 100%
+			float: none
