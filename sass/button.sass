@@ -4,13 +4,14 @@ $pink: #EC008B
 $blue: #00ADEF
 $transparent: rgba(0, 0, 0, 0.75)
 $fallback: rgb(49, 49, 49)
-$donate: url(resources/donate.png)
-$support: url(resources/support.png)
-$register: url(resources/register.png)
-$login: url(resources/login.png)
-$facebook: url(resources/facebook.png)
-$twitter: url(resources/twitter.png)
-$instagram: url(resources/facebook.png)
+$donate: url(resources/sprite.png)
+$support: url(resources/sprite.png)
+$register: url(resources/sprite.png)
+$login: url(resources/sprite.png)
+$facebook: #ffffff
+$twitter: #ffffff
+$instagram: #ffffff
+$sprite: url(resources/sprite.png)
 
 
 
@@ -26,7 +27,6 @@ $instagram: url(resources/facebook.png)
 	text-decoration: none
 	vertical-align: middle
 	width: 13em
-	// width: 15em
 
 	&:hover
 		color: white
@@ -41,24 +41,29 @@ article.leader, article.child
 
 article.sidebar-item, article.leader, article.child
 	margin: 1em auto
-	// clear: left
 
 	$n: 0
-	@each $icons in	$facebook, $twitter, $instagram
+	@each $color in	$facebook, $twitter, $instagram
 		$n: $n+1
 
 		a.icon
 
 			&:nth-child(#{$n})
-				background-image: $icons					
-				background-repeat: no-repeat
-				border-radius: 50%
-				width: 32px
-				height: 32px
-				display: inline-block
-				text-indent: -9999px
-				margin: 1em 1em 0em 1em
 
+				border-radius: 7px
+				background-color: $color
+				background-image: $sprite
+				background-position: -368px -192px - ($n * 64px) 
+				-ms-background-position-x: -372px
+				-ms-background-position-y: 336px - ($n * 64px)				
+				background-repeat: no-repeat
+				display: inline-block
+				height: 32px
+				margin: 1em 1em 0em 1em
+				text-indent: -9999px
+				width: 32px
+				
+				
 	$n: 0
 	@each $image in $donate, $support, $register, $login
 		$n: $n+1
@@ -67,10 +72,10 @@ article.sidebar-item, article.leader, article.child
 	
 			a.button
 				background-image: $image
-				background-size: 30px
 				background-repeat: no-repeat
-				background-position: 10px 10px
-
+				background-position: -362px 80px - ($n * 64px) 
+				-ms-background-position-x: -362px
+				-ms-background-position-y: 80px - ($n * 64px) 
 			
 	
 	$n: 0
@@ -84,7 +89,7 @@ article.sidebar-item, article.leader, article.child
 				box-shadow: 2px 3px 1px darken($color, 25%)
 
 				@if $n % 2 == 1
-
+ 
 					color: #ffffff
 
 					&:hover
@@ -92,6 +97,6 @@ article.sidebar-item, article.leader, article.child
 				
 				&:hover
 					box-shadow: 1px 2px 1px darken($color, 25%)
-					position: relative
 					left: 1px
+					position: relative
 					top: 1px

@@ -38,12 +38,9 @@ nav.main-menu.compact .compact-menu
 nav
 	font-size: 1em
 	text-align: center
-	// padding: 0.5em
 	background-color: $fallback
 	background-color: $transparent
-	// box-shadow: 1px 2px 1px $fallback
 	border-radius: 10px
-	// border: 1px solid $transparent
 
 	@extend %clearfix
 	
@@ -59,7 +56,9 @@ nav
 		padding: 0 2.5em
 			
 	.current
-		background: url(resources/page_locator.png) center no-repeat
+		background: url(resources/sprite.png) no-repeat
+		background-position: 50% -278px
+
 		a
 			color: white
 			font-weight: 500
