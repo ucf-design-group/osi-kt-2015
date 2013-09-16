@@ -3,30 +3,21 @@
 	background-image: url(resources/banner3.png)
 
 	article.sponsor
-
-		width: 50%
-		margin-bottom: 1em
+		
+		clear: left
+		float: left
+		margin-bottom: 3em
+		min-width: 50%
+		
+		@extend %clearfix
 		
 		img
 			float: left
 			margin: 0 1em 1em 0
 			
-		&:nth-child(2n+1)
-			clear: left
-			float: left
-			padding: 0 1em 0 0
-		&:nth-child(2n+2)
-			clear: right
-			float: right
-			padding: 0 0 0 1em
-		&:nth-child(2)
-			clear: left
-			float: left
-			padding: 0 1em 0 0
-		
-	@media screen and (max-width: 700px)
-		
-		article.sponsor:nth-child(2)
-			clear: right
-			float: right
-			padding: 0 0 0 1em
+		@media screen and (max-width: 750px)
+			&:nth-child(1), &:nth-child(2)
+				width: 50%
+			
+		@media screen and (max-width: 700px)
+			width: 100%
