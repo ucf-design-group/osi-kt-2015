@@ -11,7 +11,7 @@
 
 // Necessary imports, feel free to explore and hack though :)
 @import reset, menu, button, footer, hospitals, contact, home, events, children, sponsors, about, join-in
-@import url("http://fonts.googleapis.com/css?family=Covered+By+Your+Grace")
+// @import url("http://fonts.googleapis.com/css?family=Covered+By+Your+Grace")
 
 // Base variables
 $baseTypeFace: "proxima-nova", sans-serif
@@ -59,6 +59,7 @@ h2
 	color: $pink
 	font-size: 2.4em
 	font-weight: 300
+	margin-top: 1em
 
 
 h3
@@ -117,6 +118,9 @@ footer
 		display: block
 		margin: auto
 		max-width: 1000px
+	
+	a
+		color: #ffffff
 
 
 aside
@@ -177,7 +181,7 @@ div.fancybox
 @media screen and (max-width: 700px)
 
 	.aside-placeholder
-		height: 150px
+		height: 255px
 		margin-top: 1em	
 
 	aside
@@ -191,14 +195,14 @@ div.fancybox
 			display: inline-block
 			margin-left: 1em
 			margin-right: 1em
-
-			&:nth-child(2n+2)
-				clear: right
+				
+			&:last-child
+				display: block
 
 @media screen and (max-width: 490px)
 	
 	.aside-placeholder
-		height: 260px
+		height: 390px
 
 	aside article.sidebar-item
 		display: block
