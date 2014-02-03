@@ -42,7 +42,7 @@
 						<article class="child">
 							<h3><?php echo $title; ?></h3>
 							<?php echo $image; ?>
-							<a class = "fancybox button" href="#child-bio-<?php echo $post->post_name;?>" id="child-expand">Show Bio</a>
+							<a class = "fancybox button" href="#child-bio-<?php echo $post->post_name;?>" id="child-expand">Miracle Story</a>
 							<div class="fancybox" id="child-bio-<?php echo $post->post_name;?>">
 								<h3><?php echo $title;?></h3>
 								<?php echo $image; ?>
