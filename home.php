@@ -38,9 +38,6 @@ get_header(); ?>
 						the_post();
 						get_template_part( 'content', 'home' );
 					} ?>
-<!-- 					<div class="vimeo-wrap"><div>
-						<iframe src="http://player.vimeo.com/video/49281355" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-					</div></div> -->
 
 				</div>
 			</div>
