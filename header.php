@@ -9,10 +9,9 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/selectivizr-min.js" type="text/javascript"></script>
 		<![endif]-->
-		<script type="text/javascript" src="http://use.typekit.net/xxh5wzw.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Covered+By+Your+Grace">
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+		<!--<script type="text/javascript" src="http://use.typekit.net/afg8usc.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif|Montserrat|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 	</head>
 <?php
 	global $post;

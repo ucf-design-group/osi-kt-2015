@@ -2,23 +2,30 @@
 
 	background-image: url(resources/banner2.png)
 
+
 	article.event
-		margin-bottom: 2em
+		margin-bottom: 5em
+		width: 75%
 
-		@extend %clearfix
+		img
+			margin-bottom: 2em
 
-		&:nth-child(2n+1) a.img
-			float: left
-			margin: 0 1em 1em 0
 
-		&:nth-child(2n+2) a.img
-			float: right
-			margin: 0 0 1em 1em
+		// @extend %clearfix
+
+		// &:nth-child(2n+1) a.img
+		// 	float: left
+		// 	margin: 0 1em 1em 0
+
+		// &:nth-child(2n+2) a.img
+		// 	float: right
+		// 	margin: 0 0 1em 1em
 		
 	
 	@media screen and (max-width: 480px)
 		
 		article.event
+			width: 100%
 
 			&:nth-child(n) a.img
 			

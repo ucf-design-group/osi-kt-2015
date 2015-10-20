@@ -36,11 +36,11 @@
 							$sponsorsLoop->the_post();
 							$title = get_the_title();
 							$content = get_the_content();
-							$image = get_the_post_thumbnail($post->ID, 'thumbnail');
+							$image = get_the_post_thumbnail($post->ID, 'medium');
 ?>	
 						<article class="sponsor">
-							<?php echo $image; ?>
 							<h3><?php echo $title; ?></h3>
+							<?php echo $image; ?>
 							<p><?php echo $content; ?><p>
 						</article>
 <?php 				}

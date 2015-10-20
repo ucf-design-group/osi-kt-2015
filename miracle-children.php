@@ -37,11 +37,12 @@
 							$childrenLoop->the_post();
 							$title = get_the_title();
 							$content = get_the_content();
-							$image = get_the_post_thumbnail($post->ID, 'thumbnail');
+							$image = get_the_post_thumbnail($post->ID, 'medium');
+
 ?>	
 						<article class="child">
 							<h3><?php echo $title; ?></h3>
-							<?php echo $image; ?>
+							<div class="thumbnail"><?php echo $image; ?></div>
 							<a class = "fancybox button" href="#child-bio-<?php echo $post->post_name;?>" id="child-expand">Miracle Story</a>
 							<div class="fancybox" id="child-bio-<?php echo $post->post_name;?>">
 								<h3><?php echo $title;?></h3>

@@ -41,7 +41,7 @@ get_header(); ?>
 								<h3>Email:</h3>
 								<p><a href="mailto:knight-thon@ucf.edu">knight-thon@ucf.edu</a></p>
 								<h3>Mail:</h3>
-								<p>P.O. Box 163245, Orlando, FL 32816-3254</p>
+								<p>12715 Pegasus Drive, Student Union Room 208, Orlando, FL 32816</p>
 						</section>	
 
 

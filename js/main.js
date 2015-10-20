@@ -56,13 +56,36 @@ $(window).resize(function () {
 });
 
 
-//Countdown Timer
+$(document).ready(function () {
+
+	adjustNav();
+
+	//Start Timer Countdown on Splash Page
+	countdownTimer();
+
+	// Adjust video bg for mobile styles
+
+	allowDesktopBGVidLoad();
+	responsiveBgVideo();
+
+});
+
+
+// On window resize, reevaluate the view of the navigation.
+$(window).resize(function () {
+
+	adjustNav();
+	responsiveBgVideo();
+
+});
+
+
 
 
  
 function timer() {
 
-	var target_date = new Date("April 5, 2014").getTime();
+	var target_date = new Date("October 19, 2015").getTime();
  
 	var days, hours, minutes, seconds;
  
@@ -79,16 +102,60 @@ function timer() {
      
     minutes = parseInt(seconds_left / 60);
     seconds = parseInt(seconds_left % 60);
-     
-    countdown.innerHTML = days + " " + hours + " "
-    + minutes + " " + seconds + " ";  
+    
+	if (seconds_left > 0){
+    	countdown.innerHTML = days + " " + hours + " "
+    	+ minutes + " " + seconds + " ";  
+	}
+	else{
+		countdown.innerHTML = "0" + " " + "0" + " "
+    	+ "0" + " " + "0" + " ";  
+	}
  
+}
+
+function allowDesktopBGVidLoad () {
+
+	// Check if .bgvideo is on the page, if not don't run this function
+	if ($(".bgvid").length > 0){
+
+		// If screen resolution is Greater then 600 create source element
+		if ( $(window).width() > 600) { 
+			     
+
+			// Add source 1 from array on Splash.php
+			var source = document.createElement('source');
+				source.src = sourceArray[0].source;
+				source.type = sourceArray[0].type;
+
+			// Add source 2 from array on Splash.php
+			var source2 = document.createElement('source');
+				source2.src = sourceArray[1].source;
+				source2.type = sourceArray[1].type;
+
+			// Append source elements to HTML5 bg video tag
+			document.getElementById("bgvid").appendChild(source);
+			document.getElementById("bgvid").appendChild(source2);
+
+		}
+	}
+}
+
+function responsiveBgVideo () {
+
+	$(".bgvid").each(function () {
+
+		width = $(this).width();
+		totalWidth = $(this.parentElement).width();
+
+		$(this.parentElement).scrollLeft((width - totalWidth) / 2);
+	});
 }
 
 
 function countdownTimer() {
 
-	var endTime = new Date("5 April 2014");			
+	var endTime = new Date("22 April 2016"); // 28 March 2015			
 	endTime = (Date.parse(endTime) / 1000);
 
 	var now = new Date();
@@ -105,9 +172,24 @@ function countdownTimer() {
 	if (minutes < "10") { minutes = "0" + minutes; }
 	if (seconds < "10") { seconds = "0" + seconds; }
 
-	$("#days").html(days + "<span class='countdown-label'>Days</span>");
-	$("#hours").html(hours + "<span class='countdown-label'>Hours</span>");
-	$("#minutes").html(minutes + "<span class='countdown-label'>Minutes</span>");
-	$("#seconds").html(seconds + "<span class='countdown-label'>Seconds</span>");		
+	if (days < 0)
+		$("#days").html("0" + "<span class='countdown-label'>Days</span>");
+	else
+		$("#days").html(days + "<span class='countdown-label'>Days</span>");
+
+	if (days < 0)
+		$("#hours").html("0" + "<span class='countdown-label'>Hours</span>");
+	else
+		$("#hours").html(hours + "<span class='countdown-label'>Hours</span>");
+
+	if (days<0)
+		$("#minutes").html("0" + "<span class='countdown-label'>Minutes</span>");
+	else
+		$("#minutes").html(minutes + "<span class='countdown-label'>Minutes</span>");
+
+	if (days<0)
+		$("#seconds").html("0" + "<span class='countdown-label'>Seconds</span>");	
+	else
+		$("#seconds").html(seconds + "<span class='countdown-label'>Seconds</span>");		
 
 }

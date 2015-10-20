@@ -3,12 +3,49 @@ $yellow: #F8ED31
 $green: #99cc33
 $pink: #EC008B
 $blue: #00ADEF
+$gold: #ffca06
+$black: #000000
 
 .page-home
+
+	.splash-background
+		position: fixed 
+		right: 0 
+		bottom: 0
+		background: url(resources/banner2.jpg) no-repeat center
+		min-width: 100% 
+		min-height: 100%
+		width: 100% 
+		height: 100% 
+		z-index: -100
+		background-size: cover
+		overflow: hidden
+
+		.bgvid
+			display: none
+			position: absolute 
+			right: 0 
+			left: 0
+			margin: auto
+			min-width: 100% 
+			display: none
+			min-height: 100%
+			width: auto
+			z-index: -100
+			background: url(resources/banner2.jpg) no-repeat
+			background-size: cover
+
+			@media screen and (min-width: 600px)
+
+				display: inline-block
 	
 	background-image: url(resources/banner2.png)
 	text-align: center
-	
+
+	h1
+		font-family: 'fairviewregular'
+		font-size: 4.5em
+
 	section
 		float: none
 		width: 100%
@@ -21,8 +58,8 @@ $blue: #00ADEF
 		width: auto
 		margin: 0.5em
 
-	.countdown-timer
-		font-family: 'Covered By Your Grace', cursive
+	.countdown-timer, .amount-raised
+		font-family: 'fairviewregular'
 		font-size: 10px
 		text-align: center
 		text-shadow: 2px 2px #000000
@@ -38,22 +75,22 @@ $blue: #00ADEF
 			font-size: 32px
 			font-size: 2rem
 
-		#days
-			color: $pink //#db4844
+		#days, #dollar
+			color: $gold //#db4844
 
-		#hours
-			color: $yellow //#f07c22
+		#hours, #hundreds
+			color: $gold //#f07c22
 
-		#minutes
-			color: $blue //#f6da74
+		#minutes, #ones
+			color: $gold //#f6da74
 
-		#seconds
-			color: $green //#abcd58
+		#seconds, #cents
+			color: $gold //#abcd58
 			
 		h1
 			color: #ffffff
 			font-size: 7em
-	
+
 	.vimeo-wrap
 		
 		margin: 1em auto
