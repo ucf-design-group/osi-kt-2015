@@ -155,7 +155,7 @@ function responsiveBgVideo () {
 
 function countdownTimer() {
 
-	var endTime = new Date("22 April 2016"); // 28 March 2015			
+	var endTime = new Date("2 April 2016"); // 28 March 2015			
 	endTime = (Date.parse(endTime) / 1000);
 
 	var now = new Date();
