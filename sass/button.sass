@@ -1,7 +1,4 @@
-$yellow: #F8ED31
-$green: #99cc33
-$pink: #EC008B
-$blue: #00ADEF
+$yellow: #ffca06
 $transparent: rgba(0, 0, 0, 0.75)
 $fallback: rgb(49, 49, 49)
 $donate: url(resources/sprite.png)
@@ -16,7 +13,7 @@ $sprite: url(resources/sprite.png)
 
 
 .button
-	background-color: $blue
+	background-color: $yellow
 	border-radius: 5px
 	color: #000000
 	cursor: pointer
@@ -78,26 +75,3 @@ article.sidebar-item, article.leader, article.child
 				-ms-background-position-x: -362px
 				-ms-background-position-y: 80px - ($n * 64px) 
 			
-	
-	$n: 0
-	@each $color in $pink, $yellow, $blue, $green
-		$n: $n+1
-
-		&:nth-child(4n+#{$n})
-
-			a.button
-				background-color: $color
-				box-shadow: 2px 3px 1px darken($color, 25%)
-
-				@if $n % 2 == 1
- 
-					color: #ffffff
-
-					&:hover
-						color: #000000
-				
-				&:hover
-					box-shadow: 1px 2px 1px darken($color, 25%)
-					left: 1px
-					position: relative
-					top: 1px
